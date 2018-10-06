@@ -12,14 +12,14 @@
     <link href="../Content/assetsLogin/css/owl.theme.default.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="image-container set-full-height" style="background-image: url('/Content/assets/img/heliconias.jpg')">
+    <div class="image-container set-full-height" style="background-image: url('/Content/assetsLogin/img/heliconias.jpg')">
         <!--   Big container   -->
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="wizard-container">
                         <div class="card wizard-card" data-color="red" id="wizard">
-                            <form action="" method="">
+                            <form runat="server">
                                 <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
                                 <div class="wizard-header">
                                     <h3 class="wizard-title">Formulario de pagina
@@ -43,32 +43,34 @@
                                                 </a>
                                             </div>
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="card-body">
-                                                    <input disabled="disabled" type="text" class="form-control" placeholder="Nombre de grupo">
-                                                                <input disabled="disabled" type="text" class="form-control" placeholder="Significado de Siglas">
-                                                                <div  class="form-group">
+                                                <div class="card-body"  runat="server" >
+                                                   <asp:TextBox disabled="disabled"  id="nombreGrupo" class="form-control"  TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                   <asp:TextBox disabled="disabled"  id="sigSiglas" class="form-control"  TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+
+                                                    <div  class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                                    <textarea disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="Objetivo" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
+
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Misión</label>
-                                                                    <textarea disabled="disabled"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="Mision" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                  <div  class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Visión</label>
-                                                                    <textarea disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="Vision" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Justificación</label>
-                                                                    <textarea  disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="Justificacion" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                 <div  class="form-group">
                                                                     <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                                    <textarea disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="QuienSomos" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                 <div  class="col-sm-2 ">
                                                                     <h4>Imagen de Grupo</h4>
-                                                                    <img src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
+                                                                    <img runat="server" ID="imagenDeGrupo" src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
                                                                 </div>
                                                 </div>
                                             </div>
@@ -80,7 +82,7 @@
                                                         <i class="material-icons">mail</i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Correo Electronico">
+                                                   <asp:TextBox  id="CorreoGrupo" class="form-control"  TextMode="multiline" type="text" placeholder="Correo electronico" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -90,7 +92,7 @@
                                                         <i class="material-icons">phone_iphone</i>
                                                     </span>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Telefono">
+                                                   <asp:TextBox   id="TelefonoGrupo" class="form-control"  TextMode="multiline" type="text" placeholder="Telefono" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -100,7 +102,7 @@
                                                         <i class="material-icons">place</i>
                                                     </span>
                                                 </div>
-                                                <input type="text" placeholder="Dirección" class="form-control" />
+                                                   <asp:TextBox   id="DireccionGrupo" class="form-control"  TextMode="multiline" type="text" placeholder="Direccion" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -111,7 +113,7 @@
                                                         <h6>Color por defecto</h6>
                                                     </span>
                                                 </div>
-                                                <input type="color" class="form-control" placeholder="">
+                                                   <asp:TextBox   id="Color" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -150,31 +152,31 @@
                                                         <div id="collapseFive" id="collapseStyle" class="collapse show" style:Color  role="tabpanel" aria-labelledby="headingFive">
                                                            
                                                             <div class="card-body">
-                                                                <input disabled="disabled" type="text" class="form-control" placeholder="Nombre de grupo">
-                                                                <input disabled="disabled" type="text" class="form-control" placeholder="Significado de Siglas">
-                                                                <div  class="form-group">
+                                                                <asp:TextBox disabled="disabled"  id="NombreSemillero" class="form-control"  TextMode="multiline" type="text" placeholder="Nombre de grupo" runat="server"></asp:TextBox>
+                                                                <asp:TextBox disabled="disabled"  id="siglaSemillero" class="form-control"  TextMode="multiline" type="text" placeholder="Significado de Siglas" runat="server"></asp:TextBox>
+                                                         <div  class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Objetivos</label>
-                                                                    <textarea disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="ObjetivoSemillero" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Misión</label>
-                                                                    <textarea disabled="disabled"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="MisionSemiller" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                  <div  class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Visión</label>
-                                                                    <textarea disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="VisionSemillero" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                  <div class="form-group">
                                                                     <label for="exampleFormControlTextarea1">Justificación</label>
-                                                                    <textarea  disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="JustificacionSemillero" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                 <div  class="form-group">
                                                                     <label for="exampleFormControlTextarea1">¿Quienes Somos?</label>
-                                                                    <textarea disabled="disabled" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                              <asp:TextBox disabled="disabled" Columns="50" Rows="5" id="QuinesSomosSemillero" class="form-control"  TextMode="multiline" type="text" placeholder="" runat="server"></asp:TextBox>
                                                                 </div>
                                                                 <div  class="col-sm-2 ">
                                                                     <h4>Imagen de Grupo</h4>
-                                                                    <img src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
+                                                                    <img   runat="server" ID="imagenDeSemillero"  src="/Content/assets/img/faces/avatar.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
                                                                 </div>
 
                                                             </div>

@@ -100,3 +100,7 @@ C:\Users\Giecom_strix\Desktop\viewGroup este si\viewGroup este si\bin\es\System.
 C:\Users\Giecom_strix\Desktop\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.csproj.CopyComplete
 C:\Users\Giecom_strix\Desktop\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.dll
 C:\Users\Giecom_strix\Desktop\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.pdb
+C:\Users\Brayan\Documents\GitHub\WEB_viewgroup\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.csprojAssemblyReference.cache
+C:\Users\Brayan\Documents\GitHub\WEB_viewgroup\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.csproj.CoreCompileInputs.cache
+C:\Users\Brayan\Documents\GitHub\WEB_viewgroup\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.dll
+C:\Users\Brayan\Documents\GitHub\WEB_viewgroup\viewGroup este si\viewGroup este si\obj\Debug\viewGroup este si.pdb
